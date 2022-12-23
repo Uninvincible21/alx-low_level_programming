@@ -5,7 +5,6 @@
  * @str: string to capitalize
  * Return:returns the capitalized string
  */
-
 char *cap_string(char *str)
 {
 	int index = 0;
