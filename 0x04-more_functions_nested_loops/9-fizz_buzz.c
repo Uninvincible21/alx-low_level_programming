@@ -1,27 +1,41 @@
-#include "stdio"
+#include "holberton.h"
+#include <stdio.h>
 
 /**
- * main - Fizz-Buzz test
- *
- * Return: 0 on success
- */
-
+  * main - Prints a Fizz Buzz program
+  *
+  * Return: Always 0 (Success)
+  */
 int main(void)
 {
-	int start = 1, end = 100;
+	int x;
 
-	while (start <= 100)
+	for (x = 1; x <= 100; x++)
 	{
-		if (start % 3 == 0)
+		if ((x % 3 == 0) && (x % 5 == 0))
+		{
+			printf("FizzBuzz");
+		}
+		else if (x % 3 == 0)
+		{
 			printf("Fizz");
-		if (start % 5 == 0)
+		}
+		else if (x % 5 == 0)
+		{
 			printf("Buzz");
-		if (start % 3 != 0 && start % 5 != 0)
-			printf("%d", start);
+		}
+		else
+		{
+			printf("%d", x);
+		}
 
-		putchar(start == end ? '\n' : ' ');
-		start++;
+		if (x != 100)
+		{
+			printf(" ");
+		}
 	}
+
+	printf("\n");
 
 	return (0);
 }
